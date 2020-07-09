@@ -1,2 +1,2 @@
-# personal-blog-crow
-Simple PHP OOP socipersonal blog based on mvc
+# php-blog
+Simple PHP OOP personal blog based on mvc

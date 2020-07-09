@@ -1,0 +1,203 @@
+
+:root{
+  --black: #000;
+  --tomato: tomato;
+}
+.admin_menu{
+  width: 400px;
+  border-top: 5px solid var(--tag_menu_color);
+  border-left: 5px solid var(--tag_menu_color);
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
+.item{
+  border-top: 1px solid  var(--black);
+  overflow: hidden;
+}
+.btn{
+  display: block;
+  padding: 16px 20px;
+  background: var(--black);
+  color: white;
+  position: relative;
+}
+.btn:before{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background:  var(--black);
+  left: 20px;
+  bottom: -7px;
+  transform: rotate(45deg);
+}
+.smenu{
+  background: #fff;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+.smenu a{
+  display: block;
+  padding: 16px 25px;
+  color:  var(--black);
+  font-size: 14px;
+  margin: 4px 0;
+  position: relative;
+}
+.smenu a:before{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background:  var(--tag_menu_color);
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+.smenu a:hover:before{
+  opacity: 1;
+}
+.item:target .smenu{
+  max-height: 10em;
+}
+main{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  align-items: normal;
+}
+/* ADD POST */
+.form{
+  width: 300px;
+}
+.card_body{
+  flex: 1;
+  margin: 0 50px;
+}
+.card_header{
+  font-size: 1.2em;
+}
+.form_group{
+  display:flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+input[class="form_control"] {
+  width: 100%;
+  padding: 10px 5px;
+}
+textarea{
+  width: 200%;
+  min-height: 200px;
+  border		: 1px solid #888;
+  padding: 5px;
+  resize: both;
+}
+select{
+  padding: 5px;
+  width: 100%;
+}
+
+.submit{
+  padding: 15px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: 2px solid tomato;
+}
+/* ADMIN POSTS */
+.admin_table td{
+  padding: 20px 10px;
+}
+.admin_table tr{
+ padding: 5px;
+}
+.edit_btn{
+  border: 2px solid #66a3ff;
+  padding: 5px;
+  color: #fff;
+  background-color: #0066ff;
+}
+.delete_btn{
+  border: 2px solid #cc0000;
+  padding: 5px;
+  color: #fff;
+  background-color: #cc0000;
+}
+.delete_btn:hover,
+.edit_btn:hover{
+  color: yellow;
+}
+.admin_table tr:nth-child(2n) {
+  background-color: LightGray;
+}
+#name, #data {
+  cursor: pointer;
+}
+.admin_table{
+  border-collapse: collapse;
+}
+/*USER PAGE*/
+.card_inner{
+margin-top: 30px;
+display: flex;
+}
+.user_info{
+  margin-left: 30px;
+}
+.card_op button{
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.message{
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+  background: #2e86de;
+  -webkit-box-shadow: 14px 8px 11px 2px rgba(46,74,117,1);
+-moz-box-shadow: 14px 8px 11px 2px rgba(46,74,117,1);
+box-shadow: 14px 8px 11px 2px rgba(46,74,117,1);
+}
+.message:hover{
+  transform: scale(1.05);
+}
+.new_message{
+  background: #ee5253;
+  -webkit-box-shadow: 14px 8px 11px 2px rgba(247,3,68,1);
+  -moz-box-shadow: 14px 8px 11px 2px rgba(247,3,68,1);
+  box-shadow: 14px 8px 11px 2px rgba(247,3,68,1);
+}
+.message_inner{
+  display: flex;
+}
+.message_header{
+  font-size: 0.7em;
+}
+.message_text{
+  margin: 10px 0 0 10px;
+  overflow: hidden;
+  text-overflow: '.';
+  max-height: 70px;
+}
+.message_delete{
+  font-family: 'Arial';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.message_delete:hover{
+  color: tomato;
+}
+.back{
+  margin-left: 50px;
+  font-size: 0.8em;
+}
+.back:hover{
+  color: tomato;
+  transition: 0.2s;
+}
